@@ -5,8 +5,8 @@ RUN apt-get install apt-utils -y
 RUN apt-get install git -yqq
 RUN apt-get install -y zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng12-dev libxpm-dev libvpx-dev libmcrypt-dev libgmp-dev
 RUN apt-get install wget -y
-RUN wget http://xdebug.org/files/xdebug-2.4.0.tgz
-RUN tar -xzf xdebug-2.4.0.tgz && cd xdebug-2.4.0 && phpize && ./configure --enable-xdebug && make && cp modules/xdebug.so /usr/lib/. && php --ini
+RUN wget http://xdebug.org/files/xdebug-2.5.0.tgz
+RUN tar -xzf xdebug-2.5.0.tgz && cd xdebug-2.5.0 && phpize && ./configure --enable-xdebug && make && cp modules/xdebug.so /usr/lib/. && php --ini
 
 RUN docker-php-ext-configure gd \
      --with-freetype-dir=/usr/lib/x86_64-linux-gnu/ \
