@@ -22,4 +22,5 @@ RUN curl -sS https://getcomposer.org/installer| php
 RUN echo 'zend_extension="/usr/lib/xdebug.so"'> /usr/local/etc/php/conf.d/20-xdebug.ini
 RUN echo 'xdebug.remote_enabled=1' >> /usr/local/etc/php/conf.d/20-xdebug.ini
 
+RUN wget https://phar.phpunit.de/phpunit-6.0.phar && chmod +x phpunit-6.0.phar && mv phpuni-6.0.phar /usr/local/bin/phpunit
 
