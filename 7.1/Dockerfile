@@ -23,4 +23,3 @@ RUN echo 'zend_extension="/usr/lib/xdebug.so"'> /usr/local/etc/php/conf.d/20-xde
 RUN echo 'xdebug.remote_enabled=1' >> /usr/local/etc/php/conf.d/20-xdebug.ini
 
 RUN wget https://phar.phpunit.de/phpunit-6.0.phar && chmod +x phpunit-6.0.phar && mv phpunit-6.0.phar /usr/local/bin/phpunit
-
